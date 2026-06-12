@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx --yes esbuild --version)",
+      "Bash(mkdir -p /tmp/pwa-build)",
+      "Read(//tmp/**)",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(./node_modules/.bin/esbuild entry.jsx --bundle --minify --loader:.jsx=jsx --outfile=app.js)",
+      "Bash(python3 -m http.server 8123)",
+      "Bash(curl -sI http://localhost:8123/index.html)",
+      "Skill(run)",
+      "Bash(chromium-cli *)",
+      "Bash(grep -i -E \"chrome$|chromium$\")",
+      "Bash(npx --yes playwright install chromium)",
+      "Bash(node verify.js)",
+      "Bash(curl -s http://localhost:8123/index.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8123/app.js)",
+      "Bash(node debug.js)",
+      "Bash(./node_modules/.bin/esbuild entry.jsx --bundle --minify --loader:.jsx=jsx --jsx=automatic --outfile=app.js)",
+      "Bash(node debug2.js)",
+      "Bash(pkill -f \"http.server 8123\")",
+      "Bash(node verify2.js)",
+      "Bash(cp /Users/veljkoterzic/Projects/training-pwa/training-app.jsx /tmp/pwa-build/training-app.jsx)",
+      "Bash(cp app.js /Users/veljkoterzic/Projects/training-pwa/app.js)",
+      "Bash(node verify3.js)",
+      "Bash(npm run *)",
+      "Bash(node verify4.js)",
+      "Bash(git mv *)"
+    ]
+  }
+}
